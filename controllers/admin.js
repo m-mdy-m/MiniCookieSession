@@ -34,3 +34,10 @@ exports.delete = async (req,res)=>{
     console.log("delete product")
     return  res.redirect('/')
 }
+
+exports.getEdit = async ( req,res)=>{
+    const id = req.params.prodId
+    const editMode = req.query.edit
+    console.log(id)
+    console.log(editMode)
+}
