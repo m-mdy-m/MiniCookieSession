@@ -20,3 +20,6 @@
 .navigation__items a:hover{
     color: rgb(210, 219, 224);    
 }
+.active{
+    color: rgb(40, 158, 117);
+}
