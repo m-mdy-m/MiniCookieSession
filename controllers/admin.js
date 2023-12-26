@@ -28,3 +28,7 @@ exports.getDsh = async (req,res)=>{
         products
     })
 }
+exports.delete = async (req,res)=>{
+    const id = req.params.prodId
+    console.log(id)
+}
