@@ -1,0 +1,26 @@
+{
+  "name": "minicookiesession",
+  "version": "1.0.0",
+  "description":"“Explore, edit, and add products with ease: Mini project utilizing Express, Mongoose, and sessions for a dynamic user dashboard experience.”",
+  "main": "app.js",
+  "scripts": {
+    "test": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/m-mdy-m/MiniCookieSession.git"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "http",
+    "cookie",
+    "session"
+  ],
+  "author": "mahdi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/m-mdy-m/MiniCookieSession/issues"
+  },
+  "homepage": "https://github.com/m-mdy-m/MiniCookieSession#readme"
+}
