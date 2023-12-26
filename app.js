@@ -7,6 +7,7 @@ const User = require('./models/user')
 // =====ROUTES==== //
 const homeRoute = require('./routes/home')
 const adminRoute = require('./routes/admin')
+const authRoute = require('./routes/auth')
 
 app.set('view engine', 'ejs')
 app.set('views', 'views')
@@ -27,6 +28,7 @@ const DataBase_URL = 'mongodb://localhost:27017/MiniCookieSession'
 // connect ROutes //
 app.use(homeRoute)
 app.use(adminRoute)
+app.use(authRoute)
 
 const startServer = async ()=>{
     try{
