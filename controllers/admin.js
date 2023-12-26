@@ -4,7 +4,8 @@ exports.getAddProduct = async (req, res) => {
     title: "add-product",
     path: req.path,
     editing: false,
-  });
+    isAuthenticated : req.session.isLogin
+});
 };
 exports.postAddProduct = async (req, res, nxt) => {
   const title = req.body.title;
@@ -26,7 +27,8 @@ exports.getDsh = async (req, res) => {
     title: "dashboard",
     path: req.path,
     products,
-  });
+    isAuthenticated : req.session.isLogin
+});
 };
 exports.delete = async (req, res) => {
   const id = req.params.prodId;
@@ -44,7 +46,8 @@ exports.getEdit = async (req, res) => {
     path: req.path,
     product,
     editing,
-  });
+    isAuthenticated : req.session.isLogin
+});
 };
 exports.postEdit = async (req, res) => {
   const title = req.body.title;

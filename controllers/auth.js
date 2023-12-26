@@ -11,5 +11,11 @@ exports.postLogin = async (req, res, nxt) => {
   req.session.isLogin = true;
   req.session.user = user;
   await req.session.save();
-  req.redirect("/");
+  res.redirect("/");
 };
+exports.postLogout = async (req,res,nxt)=>{
+    req.session.destroy( ()=>{
+        console.log('session is remove')
+        res.redirect('/')
+    })
+}
