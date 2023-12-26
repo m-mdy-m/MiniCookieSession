@@ -6,17 +6,16 @@ exports.getAddProduct = async (req, res) => {
     editing: false,
   });
 };
-exports.postAddProduct = async(req,res)=>{
-    console.log(req.body)
-    // const title  = req.body.title
-    // const price = req.body.price
-    // console.log(title);
-    // console.log(price);
-    // const product = await Product.create({
-    //     title,
-    //     price
-    // })
-    // await product.save()
-    // console.log("create user", product)
-    // res.redirect('/')
+exports.postAddProduct = async(req,res,nxt)=>{
+    const title  = req.body.title
+    const price = req.body.price
+    console.log(title);
+    console.log(price);
+    const product = await Product.create({
+        title,
+        price
+    })
+    await product.save()
+    console.log("create user", product)
+    res.redirect('/')
 }

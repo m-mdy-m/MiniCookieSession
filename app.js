@@ -9,6 +9,7 @@ const adminRoute = require('./routes/admin')
 
 app.set('view engine', 'ejs')
 app.set('views', 'views')
+app.use(bodyParser.urlencoded({extended : false}))
 app.use(express.static(path.join(__dirname , 'public')))
 const DataBase_URL = 'mongodb://localhost:27017/MiniCookieSession'
 
