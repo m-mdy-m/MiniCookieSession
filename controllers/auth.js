@@ -11,6 +11,7 @@ exports.postLogin = async (req, res, nxt) => {
   req.session.isLogin = true;
   req.session.user = user;
   await req.session.save();
+  console.log('session is add');
   res.redirect("/");
 };
 exports.postLogout = async (req,res,nxt)=>{
