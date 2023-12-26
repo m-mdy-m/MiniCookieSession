@@ -7,13 +7,14 @@ exports.getAddProduct = async (req, res) => {
   });
 };
 exports.postAddProduct = async(req,res)=>{
-    const title  = req.body.title
-    const price = req.body.price
-    const product = await Product.create({
-        title,
-        price
-    })
-    await product.save()
-    console.log("create user", product)
+    console.log(req.body)
+    // const title  = req.body.title
+    // const price = req.body.price
+    // const product = await Product.create({
+    //     title,
+    //     price
+    // })
+    // await product.save()
+    // console.log("create user", product)
     res.redirect('/')
 }

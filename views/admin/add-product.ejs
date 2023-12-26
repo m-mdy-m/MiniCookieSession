@@ -4,7 +4,7 @@
 <%- include('../include/header.ejs') %>
 
 <main class="main">
-    <form class="forms" action="<% if(editing){%> /eit-product <%}else{ %> /add-product <% } %>" method="post">
+    <form class="forms" action="<% if(editing){%> /eit-product <%}else{ %> /add-product <% } %>" method="POST">
         <div class="wrapperInput" >
             <label for="title" class="label-input">title product</label>
             <input type="text" name="title" value="<% if (editing) { %> <% prods.title %> <% } %>">
