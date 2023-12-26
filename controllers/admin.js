@@ -29,6 +29,8 @@ exports.getDsh = async (req,res)=>{
     })
 }
 exports.delete = async (req,res)=>{
-    const id = req.params.prodId
-    console.log(id)
+    const id = req.params.prodId;
+    await Product.findByIdAndDelete(id)
+    console.log("delete product")
+    return  res.redirect('/')
 }
