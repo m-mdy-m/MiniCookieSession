@@ -12,7 +12,15 @@ app.set('view engine', 'ejs')
 app.set('views', 'views')
 app.use(bodyParser.urlencoded({extended : false}))
 app.use(express.static(path.join(__dirname , 'public')))
-
+app.use(async ( req,res,next)=>{
+    try{
+        const user = await User.findById('658afb8f4184970c05e8875d')
+        req.user = user
+        next()
+    }catch(e){
+        console.log(e)
+    }
+})
 
 const DataBase_URL = 'mongodb://localhost:27017/MiniCookieSession'
 
