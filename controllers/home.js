@@ -5,5 +5,6 @@ exports.getHome = async ( req,res,nxt)=>{
         title : "home",
         path : req.path,
         products,
+        isAuthenticated : false
     })
 }
