@@ -1,0 +1,22 @@
+<%- include('../include/base.ejs') %>
+</head>
+<%- include('../include/header.ejs') %>
+
+<main class="main">
+    <form action="<% if(editing){%> /eit-product <%}else{ %> /add-product <% } %>" method="post">
+        <div>
+            <label for="title">title product</label>
+            <input type="text" name="title" value="<% if (editing) { %> <% prods.title %> <% } %>">
+        </div>
+        <div>
+            <label for="price">price product</label>
+            <input type="number" name="price" value="<% if (editing) { %> <% prods.price %> <% } %>">
+        </div>
+        <div>
+            <button type="submit"> <% if(editing) { %> update <% }else { %> add product <%} %>  </button>
+        </div>
+
+    </form>
+</main>
+<%- include('../include/end.ejs') %>
+    
