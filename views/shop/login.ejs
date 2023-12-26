@@ -4,11 +4,13 @@
 <%- include('../include/header.ejs') %>
 
 <main class="main">
-    <form action="login" method="POST">
+    <form action="/login" method="POST" style="display: flex; justify-content: center;align-items: center;margin: 15rem;flex-direction: column;">
         <button type="submit" class="btn">LOGIN</button>
-        <form action="/logout" method="POST">
-            <button type="submit" class="btn">logout</button>
-        </form>
+        <br>
+    </form>
+    <form action="/logout" method="POST" style="display: flex; justify-content: center;align-items: center;margin: 15rem;flex-direction: column;">
+        <button type="submit" class="btn">logout</button>
+        <br>
     </form>
 </main>
 <%- include('../include/end.ejs') %>

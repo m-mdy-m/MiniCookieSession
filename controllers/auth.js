@@ -3,7 +3,7 @@ exports.getLogin = (req, res, nxt) => {
   res.render("shop/login", {
     title: "login",
     path: req.path,
-    isAuthenticated: false,
+    isAuthenticated: req.session.isLogin,
   });
 };
 exports.postLogin = async (req, res, nxt) => {
