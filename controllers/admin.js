@@ -9,11 +9,11 @@ exports.getAddProduct = async (req, res) => {
 exports.postAddProduct = async (req, res, nxt) => {
   const title = req.body.title;
   const price = req.body.price;
-  console.log(title);
-  console.log(price);
+  const userId = req.user;
   const product = await Product.create({
     title,
     price,
+    userId,
   });
   await product.save();
   console.log("create user", product);
@@ -54,7 +54,7 @@ exports.postEdit = async (req, res) => {
     title,
     price,
   });
-  console.log('update user');
+  console.log("update user");
   await product.save();
   return res.redirect("/");
 };
