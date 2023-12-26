@@ -37,7 +37,15 @@ exports.delete = async (req,res)=>{
 
 exports.getEdit = async ( req,res)=>{
     const id = req.params.prodId
-    const editMode = req.query.edit
-    console.log(id)
-    console.log(editMode)
+    const editing = req.query.edit
+    const product = Product.findById(id)
+    console.log(product)
+    console.log(product.title)
+    console.log(product.price)
+    res.render('admin/add-product', {
+        title : 'updatePro',
+        path: req.path,
+        product,
+        editing,
+    })
 }
