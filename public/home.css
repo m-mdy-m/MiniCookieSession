@@ -23,11 +23,15 @@
   color: rgb(214, 207, 207);
 }
 .btn {
-  padding: 4px;
-  border-radius: 12px;
+  padding: 8px;
+  border-radius: 8px;
   border: none;
   outline: none;
   background-color: #413d3d;
+  cursor: pointer;
+  scale: 3;
+  color: white;
+  font-size: 16px;
 }
 .btn:hover {
   background-color: #6e6969;
