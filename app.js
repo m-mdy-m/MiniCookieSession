@@ -3,10 +3,19 @@ const app = express()
 const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
 const path = require('path')
+// =====ROUTES==== //
+const homeRoute = require('./routes/home')
+
+
 app.set('view engine', 'ejs')
 app.set('views', 'views')
 app.use(express.static(path.join(__dirname , 'public')))
 const DataBase_URL = 'mongodb://localhost:27017/MiniCookieSession'
+
+// connect ROutes //
+app.use(homeRoute)
+
+
 const startServer = async ()=>{
     try{
         await mongoose.connect(DataBase_URL)
