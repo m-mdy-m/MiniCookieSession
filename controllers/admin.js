@@ -19,3 +19,12 @@ exports.postAddProduct = async(req,res,nxt)=>{
     console.log("create user", product)
     res.redirect('/')
 }
+
+exports.getDsh = async (req,res)=>{
+    const products = await Product.find()
+    res.render('admin/dashboard', {
+        title : 'dashboard',
+        path : req.path,
+        products
+    })
+}
