@@ -12,7 +12,7 @@
                 <h3> <%= product.price %> </h3>
                 <div>
                     <a href="/edit-product">EDIT</a>
-                    <form action="/delete/:prodId" method="post">
+                    <form action="/delete/<% product._id %>" method="post">
                         <button type="submit" >delete</button>
                     </form>
                 </div>
