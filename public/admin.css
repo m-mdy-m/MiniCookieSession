@@ -1,0 +1,31 @@
+.forms{
+    width: 400px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    scale: 2;
+}
+.wrapperInput{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 8px;
+}
+.wrapperInput > *{
+    margin: 3px;
+    font-family: sans-serif;
+    color: white;
+    text-transform: uppercase;
+}
+button{
+    background-color: rebeccapurple;
+}
+input,button{
+    border: none;
+    outline: none;
+    padding: 4px;
+    border-radius: 12px;
+}
