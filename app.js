@@ -3,6 +3,8 @@ const app = express()
 const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
 const path = require('path')
+const session = require('express-session')
+const CMS = require('connect-mongodb-session')(session)
 const User = require('./models/user')
 // =====ROUTES==== //
 const homeRoute = require('./routes/home')
@@ -11,8 +13,23 @@ const authRoute = require('./routes/auth')
 
 app.set('view engine', 'ejs')
 app.set('views', 'views')
+const DataBase_URL = 'mongodb://localhost:27017/MiniCookieSession'
+
+const store = new CMS({
+    uri : DataBase_URL,
+    collection : 'session'
+})
+
 app.use(bodyParser.urlencoded({extended : false}))
 app.use(express.static(path.join(__dirname , 'public')))
+
+app.use(session({
+    secret: "secret",
+    resave: false,
+    saveUninitialized : false,
+    store : store
+}))
+
 app.use(async ( req,res,next)=>{
     try{
         const user = await User.findById('658afb8f4184970c05e8875d')
@@ -23,7 +40,6 @@ app.use(async ( req,res,next)=>{
     }
 })
 
-const DataBase_URL = 'mongodb://localhost:27017/MiniCookieSession'
 
 // connect ROutes //
 app.use(homeRoute)
