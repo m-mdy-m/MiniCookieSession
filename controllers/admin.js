@@ -38,14 +38,19 @@ exports.delete = async (req,res)=>{
 exports.getEdit = async ( req,res)=>{
     const id = req.params.prodId
     const editing = req.query.edit
-    const product = Product.findById(id)
-    console.log(product)
-    console.log(product.title)
-    console.log(product.price)
+    const product = await Product.findById(id)
     res.render('admin/add-product', {
         title : 'updatePro',
         path: req.path,
         product,
         editing,
     })
+}
+exports.postEdit = async (req,res)=>{
+    const title = req.body.title
+    const price = req.body.price
+    const id = req.params.prodId
+    console.log(id)
+    console.log(title)
+    console.log(price)
 }

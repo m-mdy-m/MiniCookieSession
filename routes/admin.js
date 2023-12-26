@@ -8,5 +8,6 @@ router.get("/admin", adminControllers.getDsh);
 
 router.post("/delete/:prodId", adminControllers.delete);
 
-router.get('/edit-product/:prodId', adminControllers.getEdit)
+router.get("/edit-product/:prodId", adminControllers.getEdit);
+router.post('/edit-product/:prodId', adminControllers.postEdit)
 module.exports = router;

@@ -4,14 +4,14 @@
 <%- include('../include/header.ejs') %>
 
 <main class="main">
-    <form class="forms" action="<% if(editing){%> /eit-product <%}else{ %> /add-product <% } %>" method="POST">
+    <form class="forms" action="<% if(editing){%> /eit-product/<%= product._id %> <%}else{ %> /add-product <% } %>" method="POST">
         <div class="wrapperInput" >
             <label for="title" class="label-input">title product</label>
-            <input type="text" name="title" value="<% if (editing) { %> <% product.title %> <% } %>">
+            <input type="text" name="title" value="<% if (editing) { %> <%= product.title %> <% } %>">
         </div>
         <div class="wrapperInput" >
             <label for="price" class="label-input">price product</label>
-            <input type="number" name="price" value="<% if (editing) { %> <% product.price %> <% } %>">
+            <input type="number" name="price" value="<% if (editing) { %> <%= product.price %> <% } %>">
         </div>
         <div class="wrapperInput"  class="label-input">
             <button type="submit"> <% if(editing) { %> update <% }else { %> add product <%} %>  </button>
