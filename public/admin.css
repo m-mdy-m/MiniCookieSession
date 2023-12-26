@@ -32,6 +32,9 @@ input,button{
     padding: 4px;
     border-radius: 12px;
 }
+input{
+    text-transform: lowercase !important;
+}
 button{
     cursor: pointer;
 }
