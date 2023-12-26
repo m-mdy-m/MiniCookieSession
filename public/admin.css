@@ -17,15 +17,21 @@
 .wrapperInput > *{
     margin: 3px;
     font-family: sans-serif;
-    color: white;
+    color: rgb(15, 14, 14);
     text-transform: uppercase;
 }
 button{
     background-color: rebeccapurple;
+}
+.label-input{
+    color: white;
 }
 input,button{
     border: none;
     outline: none;
     padding: 4px;
     border-radius: 12px;
+}
+button{
+    cursor: pointer;
 }
