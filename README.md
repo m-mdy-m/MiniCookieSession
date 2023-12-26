@@ -69,4 +69,4 @@ Contributions to MiniCookieSession are welcome! Please feel free to fork the rep
 
 ## License
 
-Distributed under the MIT License. See `[LICENSE](https://github.com/m-mdy-m/MiniCookieSession/blob/main/LICENSE)` for more information.
+Distributed under the MIT License. See [LICENSE](https://github.com/m-mdy-m/MiniCookieSession/blob/main/LICENSE) for more information.
